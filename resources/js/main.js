@@ -67,7 +67,7 @@ let registSchedule = (e) => {
 	}
 	
 	localStorage.setItem('todo',JSON.stringify(todoList)); //사용자가 다시 들어왔을 때도 추가해놨던 할 일을 봐야하니까 localStorage에 저장해놓기
-	renderSchedule(todoList.slice(0,7));
+	renderSchedule(todoList.slice(0,8));
 }
 
 let renderSchedule = (todoList) => {
@@ -182,7 +182,7 @@ let renderPage = (renderPage, cnt) => {
 	}
 	
 	if(todoList){ //todoList가 존재한다면
-		renderSchedule(JSON.parse(todoList).slice(0,7));
+		renderSchedule(JSON.parse(todoList).slice(0,8));
 	}
 	
 	setInterval(renderCurrentTime,1000); //1초마다 브라우저에서 시간 바뀌도록
